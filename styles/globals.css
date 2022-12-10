@@ -5,7 +5,7 @@ body {
 
 	color: var(--black);
 
-	font-family: var(--font-family);
+	font-family: "Noto Sans", sans-serif;
 }
 
 a {
@@ -21,9 +21,11 @@ a {
 :root {
 	--black: #3B434E;
 	--white: #FFF;
+	--gray-light: #EBEBEB;
 	--primary: #7653FC;
+	--primary-hover: #4D28DA;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
-	--font-family: "Noto Sans", sans-serif;
+	--main-font: "Noto Sans", sans-serif;
 }
