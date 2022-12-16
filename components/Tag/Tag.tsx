@@ -4,7 +4,7 @@ import cn from "classnames";
 import { TagProps } from "./Tag.props";
 import styles from "./Tag.module.css";
 
-function Tag({
+export function Tag({
   size = "medium",
   children,
   href,
@@ -23,5 +23,3 @@ function Tag({
     </div>
   );
 }
-
-export default Tag;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function ArrowIcon(): JSX.Element {
+export function ArrowIcon(): JSX.Element {
   return (
     <svg
       width="6"
@@ -13,5 +13,3 @@ function ArrowIcon(): JSX.Element {
     </svg>
   );
 }
-
-export default ArrowIcon;
