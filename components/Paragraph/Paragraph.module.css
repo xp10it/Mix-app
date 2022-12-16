@@ -2,17 +2,17 @@
 	margin: 0;
 }
 
-.s {
+.small {
 	font-size: 14px;
 	line-height: 24px;
 }
 
-.m {
+.medium {
 	font-size: 16px;
 	line-height: 24px;
 }
 
-.l {
+.large {
 	font-size: 18px;
 	line-height: 29px;
 }

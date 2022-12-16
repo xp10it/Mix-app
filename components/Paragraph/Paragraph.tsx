@@ -5,13 +5,13 @@ import styles from './Paragraph.module.css';
 import cn from 'classnames';
 
 const Paragraph = ({size = 'medium', children, className, ...props}: ParagraphProps): JSX.Element => {
+  const buttonSizeStyles = cn({
+    [styles[size]]: size
+  });
+
   return (
-    <p className={cn(styles.p, {
-      [styles.s]: size === 'small',
-      [styles.m]: size === 'medium',
-      [styles.l]: size === 'large'
-    })}
-    {...props}
+    <p className={cn(styles.p, buttonSizeStyles)}
+      {...props}
     >
       {children}
     </p>
