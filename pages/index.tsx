@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
       <Tag color="red" size="medium">
         t2
       </Tag>
-      <Rating rating={3} />
+      <Rating rating={3} isEditable />
     </>
   );
 }

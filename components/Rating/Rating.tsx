@@ -21,12 +21,16 @@ export function Rating({
   }, [rating]);
 
   const constructRating = (currentRating: number) => {
-    const updateArray = ratingArray.map((rating: JSX.Element, i: number) => {
+    const updateArray = ratingArray.map((r: JSX.Element, i: number) => {
       return (
         <StarIcon
           classNames={cn(styles.star, {
             [styles.filled]: i < currentRating,
+            [styles.editable]: isEditable,
           })}
+          onMouseEnter={() => changeDisplay(i + 1)}
+          onMouseLeave={() => changeDisplay(rating)}
+          onClick={() => onClickHandler(i + 1)}
         />
       );
     });
@@ -34,9 +38,27 @@ export function Rating({
     setRatingArray(updateArray);
   };
 
+  const changeDisplay = (i: number) => {
+    if (!isEditable) {
+      return;
+    }
+
+    constructRating(i);
+  };
+
+  const onClickHandler = (i: number) => {
+    if (!isEditable || !setRating) {
+      return;
+    }
+
+    setRating(i);
+  };
+
   return (
     <div {...props}>
-      {ratingArray.map((star: JSX.Element, i: number) => <span key={i}>{star}</span>)}
+      {ratingArray.map((star: JSX.Element, i: number) => (
+        <span key={i}>{star}</span>
+      ))}
     </div>
   );
 }

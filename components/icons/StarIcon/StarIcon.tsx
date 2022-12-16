@@ -1,10 +1,13 @@
 import React from "react";
 import {StarIconProps} from "./StarIcon.props";
 
-function StarIcon({classNames}: StarIconProps): JSX.Element {
+function StarIcon({classNames, onClick, onMouseLeave, onMouseEnter}: StarIconProps): JSX.Element {
   return (
     <svg
       className={classNames}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onClick={onClick}
       width="20"
       height="20"
       viewBox="0 0 20 20"

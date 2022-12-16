@@ -1,8 +1,13 @@
 .star {
   margin-right: 5px;
   fill: var(--gray-dark);
+  transition: 0.3s fill ease;
 }
 
 .filled {
   fill: var(--primary);
+}
+
+.editable {
+  cursor: pointer;
 }
